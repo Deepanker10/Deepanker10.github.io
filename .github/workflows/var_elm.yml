@@ -26,7 +26,7 @@ jobs:
         id: cookies
         run: |
           DATE=$(date +%d%m%Y) # Get today's date in DDMMYYYY format
-          curl "https://nsearchives.nseindia.com/archives/nsccl/var/C_VAR1_${DATE}_1.DAT" --header 'authority: www.nseindia.com' --header 'accept: */*' --header 'accept-language: en' --header 'dnt: 1' --header 'user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.54 Safari/537.36' --header 'x-requested-with: XMLHttpRequest' --compressed -b cookies.txt > var.csv
+          curl "https://nsearchives.nseindia.com/archives/nsccl/var/C_VAR1_${DATE}_6.DAT" --header 'authority: www.nseindia.com' --header 'accept: */*' --header 'accept-language: en' --header 'dnt: 1' --header 'user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.54 Safari/537.36' --header 'x-requested-with: XMLHttpRequest' --compressed -b cookies.txt > var.csv
 
       - name: Commit & Push changes
         uses: actions-js/push@master
